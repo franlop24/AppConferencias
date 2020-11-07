@@ -1,14 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.SpeakersDetailDialogFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
+        <Toolbar
+            android:id="@+id/toolbarConference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-</FrameLayout>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/ic_launcher_round"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="1dp"
+                    android:layout_margin="15dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvSpeakerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre del Speaker"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <TextView
+                            android:id="@+id/tvSpeakerJob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="JobTitle"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <TextView
+                            android:id="@+id/tvSpeakerTrabajo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Trabajo"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                        <ImageView
+                            android:id="@+id/ivSpeakerTwitter"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_icons_twitter"
+                            android:layout_gravity="center_horizontal"/>
+                        <TextView
+                            android:id="@+id/tvSpeakerDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lorem ipsum dolo lorem imsum"
+                            android:textSize="15sp"
+                            android:textColor="@color/colorPrimary"
+                            android:gravity="center_horizontal"
+                            android:layout_margin="5dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
