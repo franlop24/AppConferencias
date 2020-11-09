@@ -13,7 +13,7 @@
         android:title="Expositores"
         android:icon="@drawable/ic_speaker" />
     <item
-        android:id="navMapFragment"
+        android:id="@+id/navMapFragment"
         android:title="Mapa"
         android:icon="@drawable/ic_map" />
 </menu>
