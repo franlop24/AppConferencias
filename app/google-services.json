@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "855526720388",
+    "firebase_url": "https://conferenciasapp.firebaseio.com",
+    "project_id": "conferenciasapp",
+    "storage_bucket": "conferenciasapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:855526720388:android:d9e7814a0a098b298213d1",
+        "android_client_info": {
+          "package_name": "com.franlops.conf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "855526720388-3cdi8ikkolr4ra8tigu2nmvqvbdedmno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.franlops.conf",
+            "certificate_hash": "1a750b561217f03ba566c23fd964ba87bae3e79b"
+          }
+        },
+        {
+          "client_id": "855526720388-utv2ib2flraj4dackv9ddlroqo20cbk4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2Zds-k9dU_lWfTMIxIf0cT_fRyBts5zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "855526720388-utv2ib2flraj4dackv9ddlroqo20cbk4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
