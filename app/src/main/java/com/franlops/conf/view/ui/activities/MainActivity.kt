@@ -1,13 +1,8 @@
-package com.franlops.conf
+package com.franlops.conf.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.firestore.FirebaseFirestore
-import com.franlops.conf.model.Conference
-import com.franlops.conf.model.Speaker
-import org.json.JSONArray
-import org.json.JSONObject
-import java.util.*
+import com.franlops.conf.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

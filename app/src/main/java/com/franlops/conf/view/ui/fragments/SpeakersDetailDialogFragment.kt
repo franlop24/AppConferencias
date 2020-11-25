@@ -1,4 +1,4 @@
-package com.franlops.conf.ui.fragments
+package com.franlops.conf.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

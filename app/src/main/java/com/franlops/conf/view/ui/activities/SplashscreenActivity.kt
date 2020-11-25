@@ -1,4 +1,4 @@
-package com.franlops.conf.ui.activities
+package com.franlops.conf.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

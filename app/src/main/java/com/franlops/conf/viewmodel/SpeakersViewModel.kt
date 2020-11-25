@@ -6,16 +6,16 @@ import com.franlops.conf.network.Callback
 import com.franlops.conf.network.FirestoreService
 import java.lang.Exception
 
-class SpeakerViewModel {
+class SpeakersViewModel {
     val firestoreService = FirestoreService()
     var listSpeakers: MutableLiveData<List<Speaker>> = MutableLiveData()
     var isLoading = MutableLiveData<Boolean>()
 
     fun refresh(){
-        getSpeakerFromFirebase()
+        getSpeakersFromFirebase()
     }
 
-    fun getSpeakerFromFirebase(){
+    fun getSpeakersFromFirebase(){
         firestoreService.getSpeakers(object: Callback<List<Speaker>>{
             override fun onSuccess(result: List<Speaker>?){
                 listSpeakers.postValue(result)
