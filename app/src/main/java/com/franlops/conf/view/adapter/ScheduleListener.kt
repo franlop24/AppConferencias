@@ -1,6 +1,6 @@
 package com.franlops.conf.view.adapter
 
-import android.telecom.Conference
+import com.franlops.conf.model.Conference
 
 interface ScheduleListener{
     fun onConferenceClicked(conference: Conference, position: Int)
