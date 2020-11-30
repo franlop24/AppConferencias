@@ -1,14 +1,22 @@
 package com.franlops.conf.view.ui.fragments
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import com.franlops.conf.R
+import com.franlops.conf.model.Ubication
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 /**
  * A simple [Fragment] subclass.
@@ -31,8 +39,24 @@ class UbicationFragment : Fragment(), OnMapReadyCallback{
         mapFragment.getMapAsync(this)
     }
 
-    override fun onMapReady(p0: GoogleMap?) {
+    override fun onMapReady(googleMap: GoogleMap?) {
+        val ubication = Ubication()
 
+        val zoom = 16f
+        val centerMap = LatLng(ubication.latitud, ubication.longitud)
+
+        googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap, zoom))
+
+        val centerMark = LatLng(ubication.latitud, ubication.longitud)
+        val markerOptions = MarkerOptions()
+        markerOptions.position(centerMark)
+        markerOptions.title("Platzi Conf 2019")
+
+        val bitmapDraw = context?.applicationContext?.let{ ContextCompat.getDrawable(it, R.drawable.logo_platzi) } as BitmapDrawable
+        val smallMarker = Bitmap.createScaledBitmap(bitmapDraw.bitmap, 150, 150, false)
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
+
+        googleMap?.addMarker(markerOptions)
     }
 
 
