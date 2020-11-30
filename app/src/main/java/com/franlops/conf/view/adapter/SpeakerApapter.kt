@@ -32,7 +32,7 @@ class SpeakerApapter(val speakerListener: SpeakerListener): RecyclerView.Adapter
             .apply(RequestOptions.circleCropTransform())
             .into(holder.ivSpeakerImage)
 
-        holder.itemView.setOnClickListener { speakerListener.onSpeakerCliked(speaker, position) }
+        holder.itemView.setOnClickListener { speakerListener.onSpeakerClicked(speaker, position) }
     }
 
     fun updateData(data: List<Speaker>){
